@@ -1,0 +1,12 @@
+.svg-container {
+    width: 64px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px 0 0 15px;
+}
+
+.bg-active {
+    background-color: #E67C30;
+}

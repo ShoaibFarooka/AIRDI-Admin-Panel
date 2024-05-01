@@ -1,0 +1,52 @@
+/* .extras {} */
+
+.extras .btn-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.extras .btn-container .btn {
+    border: none;
+    border-radius: 3px;
+    background-color: #E67C30;
+    padding: 0 15px;
+    height: 35px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.extras table {
+    margin-top: 5px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.extras th,
+.extras td {
+    padding: 8px 35px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+.extras th:last-child,
+.extras td:last-child {
+    border-right: 1px solid #ddd;
+}
+
+.extras .icon {
+    cursor: pointer;
+}
+
+.extras th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+
+.extras .extra:hover {
+    background-color: #f0f0f0;
+}

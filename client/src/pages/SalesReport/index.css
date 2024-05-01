@@ -1,0 +1,136 @@
+.sales-report {
+    padding: 22px 10px 10px 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.sales-report .filters {
+    background-color: #94A3B8;
+    padding: 10px 15px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: calc(100vh - 52px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+}
+
+.sales-report .filters .title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.sales-report .filters .sub-title-container {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sales-report .filters .closed {
+    border-bottom: 1px solid #1E293B;
+    padding: 10px;
+}
+
+.sales-report .filters .sub-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.sales-report .filters .icon {
+    cursor: pointer;
+}
+
+.sales-report .filters .input {
+    border: 1px solid #27272A;
+    border-radius: 6px;
+    background-color: #FFEDD5;
+    padding: 8px 16px;
+}
+
+.sales-report .filters .select {
+    width: 220px;
+    margin-top: 10px;
+}
+
+.sales-report .filters .card {
+    background-color: #CBD5E1;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sales-report .filters .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 220px;
+}
+
+.sales-report .filters .label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.sales-report .filters .btns-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sales-report .filters .btn {
+    border: none;
+    border-radius: 6px;
+    height: 40px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.sales-report .filters .filters-open-btn {
+    width: 110px;
+}
+
+.sales-report .filters .filters-close-btn {
+    width: 100px;
+}
+
+.sales-report .filters .btn-1 {
+    background-color: #CBD5E1;
+}
+
+.sales-report .filters .btn-2 {
+    background-color: #E67C30;
+}
+
+.sales-report .sales {
+    padding: 10px;
+    background-color: #CBD5E1;
+    height: fit-content;
+    flex: 1;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.sales-report .sales .row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sales-report .sales .row .key {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.sales-report .sales .row .value {
+    font-size: 18px;
+    font-weight: 700;
+    color: #E67C30;
+}

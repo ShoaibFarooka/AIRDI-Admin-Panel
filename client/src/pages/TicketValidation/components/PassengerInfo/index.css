@@ -1,0 +1,46 @@
+.passenger-info {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.passenger-info .item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.passenger-info .item .label {
+    font-weight: 600;
+}
+
+.passenger-info .item .text {
+    padding: 7px 15px;
+    background-color: #FFEDD5;
+    border-radius: 5px;
+    /* border: 1px solid black; */
+    min-width: 220px;
+}
+
+.passenger-info .btns-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.passenger-info .btn {
+    margin-top: 20px;
+    width: fit-content;
+    padding: 9px 20px;
+    background-color: #e67c30;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #ff7b06;
+    }
+}
+
+.passenger-info .btn-fit {}

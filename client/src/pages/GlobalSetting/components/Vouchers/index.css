@@ -1,0 +1,52 @@
+.vouchers {}
+
+.vouchers .btn-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.vouchers .btn-container .btn {
+    border: none;
+    border-radius: 3px;
+    background-color: #E67C30;
+    padding: 0 15px;
+    height: 35px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.vouchers table {
+    margin-top: 5px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.vouchers th,
+td {
+    padding: 8px 35px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+.vouchers th:last-child,
+td:last-child {
+    border-right: 1px solid #ddd;
+}
+
+.vouchers th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+
+.vouchers .voucher .icon:hover {
+    cursor: pointer;
+}
+
+.vouchers .voucher:hover {
+    background-color: #f0f0f0;
+}

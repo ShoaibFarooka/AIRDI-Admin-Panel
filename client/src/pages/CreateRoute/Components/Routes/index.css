@@ -1,0 +1,73 @@
+.routes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.routes .routes-count {
+    padding: 10px;
+    background-color: #CBD5E1;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.routes .routes-count .flex-gap-10 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.routes .group-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: fit-content;
+    margin: 10px 0;
+    padding: 3px 5px;
+    &:hover {
+        cursor: pointer;
+        background-color: #eaeaea;
+        border-radius: 6px;
+    }
+}
+
+.routes .group-header .title{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.routes table {
+    margin-top: 5px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.routes th,
+.routes td {
+    padding: 6px 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+.routes th:last-child,
+.routes td:last-child {
+    border-right: 1px solid #ddd;
+}
+
+.routes .icon {
+    cursor: pointer;
+}
+
+.routes th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+
+.routes .route:hover {
+    background-color: #f0f0f0;
+}

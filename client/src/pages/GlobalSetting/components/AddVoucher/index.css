@@ -1,0 +1,56 @@
+.add-voucher {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.add-voucher .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 200px;
+}
+
+.add-voucher .label {
+    font-size: 16px;
+    font-weight: 600;
+    width: fit-content;
+}
+
+.add-voucher .input {
+    padding: 7px 10px;
+    border-radius: 4px;
+    border: 2px solid grey;
+    background-color: #FFEDD5;
+    font-size: 16px;
+
+    &:focus {
+        outline-width: 0;
+        border-color: black;
+    }
+}
+
+.add-voucher .error {
+    color: rgb(188, 25, 25);
+    font-size: 15px;
+}
+
+.add-voucher .btns-container-2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-voucher .btns-container-2 .btn {
+    margin-top: 5px;
+    padding: 9px 0;
+    background-color: #e67c30;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 40%;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #ff7b06;
+    }
+}

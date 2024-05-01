@@ -1,0 +1,64 @@
+.buy-ticket {
+    padding: 22px 10px 10px 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.buy-ticket .filters {
+    background-color: #94A3B8;
+    padding: 10px 15px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: fit-content;
+}
+
+.buy-ticket .filters .title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.buy-ticket .filters .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 220px;
+}
+
+.buy-ticket .filters .input {
+    border: 1px solid #27272A;
+    border-radius: 6px;
+    background-color: #FFEDD5;
+    padding: 8px 16px;
+}
+
+.buy-ticket .filters .label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.buy-ticket .filters .btns-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buy-ticket .filters .btn {
+    border: none;
+    border-radius: 6px;
+    height: 40px;
+    cursor: pointer;
+    width: 100px;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.buy-ticket .filters .btn-1 {
+    background-color: #CBD5E1;
+}
+
+.buy-ticket .filters .btn-2 {
+    background-color: #E67C30;
+}
