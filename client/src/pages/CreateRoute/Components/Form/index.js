@@ -92,7 +92,7 @@ const Form = ({ getData }) => {
         try {
             const response = await busService.createRoute(payload);
             message.success(response);
-            handleResetFilters();
+            // handleResetFilters();
             getData();
         } catch (error) {
             message.error(error.response.data);
