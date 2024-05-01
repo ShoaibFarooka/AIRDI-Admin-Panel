@@ -1,0 +1,32 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Pull changes
+        run: git pull origin main
+        working-directory: /root/AIRDI-Admin-Panel
+
+      - name: Install dependencies and build client
+        run: |
+          cd /root/AIRDI-Admin-Panel/client
+          npm install
+          CI='' npm run build
