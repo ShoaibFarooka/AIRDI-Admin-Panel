@@ -10,7 +10,7 @@ const PassengerSearch = () => {
     const [passengerData, setPassengerData] = useState({
         bookingId: '',
         email: '',
-        countryCode: '',
+        countryCode: '+1',
         contact: ''
     });
     const [tripType, setTripType] = useState('');
@@ -126,7 +126,7 @@ const PassengerSearch = () => {
                     <div className="input-container">
                         <input
                             type="text"
-                            className="input"
+                            className="input input-full"
                             placeholder="Reservation Code"
                             maxLength={6}
                             name="bookingId"
@@ -140,7 +140,7 @@ const PassengerSearch = () => {
                     <div className="input-container">
                         <input
                             type="text"
-                            className="input"
+                            className="input input-full"
                             placeholder="Email"
                             name="email"
                             value={passengerData.email}
@@ -150,25 +150,26 @@ const PassengerSearch = () => {
                             <div className="error">Please enter the valid email or contact</div>
                         }
                     </div>
+                    {/* <div className="input-container">
+                    </div> */}
                     <div className="input-container">
-                        <select className='select' name='countryCode' value={passengerData.countryCode} onChange={handlePassengerDataChange}>
-                            <option value='' disabled>Please Select Country</option>
-                            {countryCodes.map((code, index) => (
-                                <option key={index} value={code.value}>
-                                    {code.label}
-                                </option>
-                            ))}
-                        </select>
-                    </div>
-                    <div className="input-container">
-                        <input
-                            type="text"
-                            className="input"
-                            placeholder="Phone Number"
-                            name="contact"
-                            value={passengerData.contact}
-                            onChange={handlePassengerDataChange}
-                        />
+                        <div className="input-flex">
+                            <select className='code-select' name='countryCode' value={passengerData.countryCode} onChange={handlePassengerDataChange}>
+                                {countryCodes.map((code, index) => (
+                                    <option key={index} value={code.value}>
+                                        {code.label}
+                                    </option>
+                                ))}
+                            </select>
+                            <input
+                                type="text"
+                                className="input"
+                                placeholder="Phone Number"
+                                name="contact"
+                                value={passengerData.contact}
+                                onChange={handlePassengerDataChange}
+                            />
+                        </div>
                         {errors.email && errors.contact &&
                             <div className="error">Please enter the valid email or contact</div>
                         }

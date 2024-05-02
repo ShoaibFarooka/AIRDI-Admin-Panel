@@ -61,7 +61,16 @@
             overflow-x: hidden;
 
             .input-container {
-                width: 240px;
+                width: 340px;
+            }
+
+            .input-flex {
+                display: flex;
+                gap: 1px;
+
+                .input {
+                    flex: 1;
+                }
             }
 
             .input {
@@ -70,12 +79,15 @@
                 border: 2px solid grey;
                 background-color: #FFEDD5;
                 font-size: 16px;
-                width: calc(240px - 24px);
 
                 &:focus {
                     outline-width: 0;
                     border-color: black;
                 }
+            }
+
+            .input-full {
+                width: calc(340px - 24px);
             }
 
             .select {
@@ -86,6 +98,21 @@
                 background-color: #FFEDD5;
                 font-size: 16px;
                 width: 100%;
+
+                &:focus {
+                    outline-width: 0;
+                    border-color: black;
+                }
+            }
+
+            .code-select {
+                cursor: pointer;
+                padding: 7px 4px;
+                border-radius: 4px;
+                border: 2px solid grey;
+                background-color: #FFEDD5;
+                font-size: 16px;
+                width: 80px;
 
                 &:focus {
                     outline-width: 0;
