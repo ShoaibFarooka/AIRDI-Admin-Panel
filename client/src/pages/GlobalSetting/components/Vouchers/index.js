@@ -10,8 +10,9 @@ import busService from "../../../../services/busService";
 
 const Vouchers = ({ vouchers, getData }) => {
     const [addVoucher, setAddVoucher] = useState(false);
+    console.log(vouchers);
     const dispatch = useDispatch();
-    
+
     const handleUpdate = async (voucher) => {
         dispatch(ShowLoading());
         try {
@@ -40,6 +41,7 @@ const Vouchers = ({ vouchers, getData }) => {
                         <th>Type</th>
                         <th>Value</th>
                         <th>Usage Limit</th>
+                        <th>Generated For</th>
                         <th>Status</th>
                         <th>Action</th>
                     </tr>
@@ -51,6 +53,7 @@ const Vouchers = ({ vouchers, getData }) => {
                             <td>{voucher.type}</td>
                             <td>{voucher.value}</td>
                             <td>{voucher.isOneTimeUse ? 'One Time' : 'Multiple Times'}</td>
+                            <td>{voucher.generatedForBooking ? voucher.generatedForBooking.code : ''}</td>
                             <td>{voucher.isExpired ? 'Expired' : 'Active'}</td>
                             {!voucher.isExpired ?
                                 <td><AiOutlineStop size={20} color="brown" className="icon" onClick={() => handleUpdate(voucher)} /></td>

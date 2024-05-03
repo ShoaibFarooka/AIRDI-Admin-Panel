@@ -92,6 +92,7 @@ const Routes = ({ routes, getData }) => {
                                         <th>Time</th>
                                         <th>Start Date</th>
                                         <th>End Date</th>
+                                        <th>Price</th>
                                         <th>Duration</th>
                                         <th>Days</th>
                                         <th>Status</th>
@@ -104,6 +105,7 @@ const Routes = ({ routes, getData }) => {
                                             <td>{route.departureTime}</td>
                                             <td>{route.startDate}</td>
                                             <td>{route.endDate}</td>
+                                            <td>${route.price}</td>
                                             <td>{route.duration}</td>
                                             <td>{route.days.join(', ')}</td>
                                             <td>{route.bookingOpen ? 'Active' : 'Stopped'}</td>
