@@ -53,7 +53,7 @@ const Vouchers = ({ vouchers, getData }) => {
                             <td>{voucher.type}</td>
                             <td>{voucher.value}</td>
                             <td>{voucher.isOneTimeUse ? 'One Time' : 'Multiple Times'}</td>
-                            <td>{voucher.generatedForBooking ? voucher.generatedForBooking.code : ''}</td>
+                            <td>{voucher.generatedForBooking ? voucher.generatedForBooking.code : '-'}</td>
                             <td>{voucher.isExpired ? 'Expired' : 'Active'}</td>
                             {!voucher.isExpired ?
                                 <td><AiOutlineStop size={20} color="brown" className="icon" onClick={() => handleUpdate(voucher)} /></td>
