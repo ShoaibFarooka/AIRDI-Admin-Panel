@@ -10,6 +10,7 @@ const GeneralSetting = ({ getData, setAddVoucher }) => {
         code: '',
         value: '',
         type: '',
+        generatedFor: '',
         isOneTimeUse: true
     });
     const [errors, setErrors] = useState({
@@ -144,6 +145,17 @@ const GeneralSetting = ({ getData, setAddVoucher }) => {
                 {errors.value &&
                     <div className="error">Invalid value</div>
                 }
+            </div>
+            <div className="input-container">
+                <label htmlFor="generatedFor" className="label">Generated For:</label>
+                <input
+                    type="text"
+                    className="input"
+                    id="generatedFor"
+                    name="generatedFor"
+                    value={formData.generatedFor}
+                    onChange={handleChange}
+                />
             </div>
             <div className="input-container">
                 <label htmlFor="" className="label">Usage Limit:</label>
