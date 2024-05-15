@@ -147,3 +147,21 @@
         }
     }
 }
+
+@media only screen and (max-width: 500px) {
+    .ticket-validation .content .form {
+        width: 60%;
+    }
+
+    .ticket-validation .content .form .input-container {
+        width: 100%;
+    }
+
+    .ticket-validation .content .form .input {
+        width: calc(100% - 24px);
+    }
+
+    .ticket-validation .content .form .select {
+        width: 100%;
+    }
+}

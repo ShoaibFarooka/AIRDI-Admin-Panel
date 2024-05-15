@@ -62,3 +62,23 @@
 .buy-ticket .filters .btn-2 {
     background-color: #E67C30;
 }
+
+@media only screen and (min-width: 501px) and (max-width: 925px) {
+    .buy-ticket {
+        flex-direction: column;
+    }
+
+    .buy-ticket .filters {
+        width: fit-content;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .buy-ticket {
+        flex-direction: column;
+    }
+
+    .buy-ticket .filters .input-container {
+        width: 100%;
+    }
+}

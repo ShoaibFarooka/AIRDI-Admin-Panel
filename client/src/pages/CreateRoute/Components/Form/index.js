@@ -110,7 +110,7 @@ const Form = ({ getData }) => {
                 </div>
                 :
                 <div className="card">
-                    <div className="sub-title-container">
+                    <div className="sub-title-container opened">
                         <div className="sub-title">Route Info</div>
                         <img src={ArrowUp} alt="arrow-up" className="icon" onClick={() => setViewCard1(!viewCard1)} />
                     </div>
@@ -143,7 +143,7 @@ const Form = ({ getData }) => {
                 </div>
                 :
                 <div className="card">
-                    <div className="sub-title-container">
+                    <div className="sub-title-container opened">
                         <div className="sub-title">Schedule</div>
                         <img src={ArrowUp} alt="arrow-up" className="icon" onClick={() => setViewCard2(!viewCard2)} />
                     </div>
@@ -170,7 +170,7 @@ const Form = ({ getData }) => {
                 </div>
                 :
                 <div className="card">
-                    <div className="sub-title-container">
+                    <div className="sub-title-container opened">
                         <div className="sub-title">Seats & Pricing</div>
                         <img src={ArrowUp} alt="arrow-up" className="icon" onClick={() => setViewCard3(!viewCard3)} />
                     </div>

@@ -107,3 +107,27 @@
 .create-route .form .btn-2 {
     background-color: #E67C30;
 }
+
+@media only screen and (min-width: 501px) and (max-width: 1205px) {
+    .create-route .form {
+        width: 250px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .create-route {
+        flex-direction: column;
+    }
+
+    .create-route .form .closed {
+        width: calc(100% - 20px);
+    }
+
+    .create-route .form .opened {
+        width: 100%;
+    }
+
+    .create-route .form .input-container {
+        width: 100%;
+    }
+}

@@ -86,7 +86,7 @@
     justify-content: space-between;
 }
 
-.buy-ticket .search-result .content.timeline-item {
+.buy-ticket .search-result .content .timeline-item {
     display: flex;
     flex-direction: column;
     font-size: 18px;
@@ -162,4 +162,34 @@
 
 .buy-ticket .search-result .content div {
     font-size: 18px;
+}
+
+@media only screen and (max-width: 570px) {
+    .buy-ticket .search-result .content {
+        width: calc(100% - 10px);
+    }
+    .buy-ticket .search-result .content .bus {
+        padding: 10px;
+    }
+
+    .buy-ticket .search-result .content .time {
+        font-size: 16px;
+    }
+
+    .buy-ticket .search-result .content .city {
+        font-size: 16px;
+    }
+
+    .buy-ticket .search-result .content .price {
+        font-size: 18px;
+    }
+
+    .buy-ticket .search-result .content div {
+        font-size: 14px;
+    }
+    .buy-ticket .search-result .content .btn {
+        gap: 7px;
+        padding: 5px 6px 5px 12px;
+    }
+
 }

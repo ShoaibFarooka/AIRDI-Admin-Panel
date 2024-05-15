@@ -20,6 +20,11 @@
     gap: 10px;
 }
 
+.routes .grouped-routes {
+    width: 100%;
+    overflow-x: auto;
+}
+
 .routes .group-header {
     display: flex;
     align-items: center;
@@ -27,6 +32,7 @@
     width: fit-content;
     margin: 10px 0;
     padding: 3px 5px;
+
     &:hover {
         cursor: pointer;
         background-color: #eaeaea;
@@ -34,7 +40,7 @@
     }
 }
 
-.routes .group-header .title{
+.routes .group-header .title {
     font-size: 20px;
     font-weight: 600;
 }
@@ -70,4 +76,40 @@
 
 .routes .route:hover {
     background-color: #f0f0f0;
+}
+
+@media only screen and (min-width: 501px) and (max-width: 1205px) {
+    .routes {
+        width: calc(100% - 260px);
+        flex: none;
+    }
+
+    .routes table {
+        min-width: 860px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .routes table {
+        min-width: 650px;
+    }
+
+    .routes .routes-count {
+        font-size: 14px;
+    }
+
+    .routes .group-header .title {
+        font-size: 16px;
+    }
+
+    /* .routes .group-header img {
+        width: 16px;
+        height: 14px;
+    } */
+
+    .routes th,
+    .routes td {
+        padding: 6px 5px;
+        font-size: 14px;
+    }
 }

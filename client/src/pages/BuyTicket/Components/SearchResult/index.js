@@ -103,7 +103,7 @@ const SearchResult = ({ outwardBuses, returnBuses, view, setView, thresholdTime 
                 </div>
             </div>
             {(outwardBuses && outwardBuses.length > 0) &&
-                < div className="content">
+                <div className="content">
                     {returnBuses.length > 0 &&
                         <div>
                             {view === 2 &&
