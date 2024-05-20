@@ -60,7 +60,7 @@
     }
 }
 
-@media only screen and (max-height: 565px) {
+@media only screen and (max-height: 550px) {
     .sidebar {
         overflow-y: auto;
     }
