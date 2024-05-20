@@ -1,4 +1,6 @@
-.vouchers {}
+.vouchers {
+    overflow-x: auto;
+}
 
 .vouchers .btn-container {
     display: flex;
@@ -49,4 +51,22 @@ td:last-child {
 
 .vouchers .voucher:hover {
     background-color: #f0f0f0;
+}
+
+@media only screen and (min-width: 501px) and (max-width: 1205px) {
+    .vouchers table {
+        min-width: 860px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .vouchers table {
+        min-width: 650px;
+    }
+
+    .vouchers th,
+    .vouchers td {
+        padding: 6px 5px;
+        font-size: 14px;
+    }
 }

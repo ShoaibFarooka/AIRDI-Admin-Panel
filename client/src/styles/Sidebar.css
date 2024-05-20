@@ -24,6 +24,7 @@
     width: 100vw;
     text-align: right;
     display: none;
+    z-index: 1;
 }
 
 .mobile-sidebar-icon svg {
@@ -56,5 +57,11 @@
 
     .mobile-sidebar-icon {
         display: block;
+    }
+}
+
+@media only screen and (max-height: 565px) {
+    .sidebar {
+        overflow-y: auto;
     }
 }

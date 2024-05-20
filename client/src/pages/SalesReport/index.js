@@ -144,9 +144,9 @@ const SalesReport = () => {
         <div className="sales-report">
             <div className="filters">
                 <div className="title">Search Filters</div>
-                <select className="input select">
+                {/* <select className="input select">
                     <option>Select Bus</option>
-                </select>
+                </select> */}
                 {!viewJourneyCard ?
                     <div className="sub-title-container closed">
                         <div className="sub-title">Journey</div>
@@ -154,7 +154,7 @@ const SalesReport = () => {
                     </div>
                     :
                     <div className="card">
-                        <div className="sub-title-container">
+                        <div className="sub-title-container opened">
                             <div className="sub-title">Journey</div>
                             <img src={ArrowUp} alt="arrow-up" className="icon" onClick={() => setViewJourneyCard(!viewJourneyCard)} />
                         </div>
@@ -179,7 +179,7 @@ const SalesReport = () => {
                     </div>
                     :
                     <div className="card">
-                        <div className="sub-title-container">
+                        <div className="sub-title-container opened">
                             <div className="sub-title">Order</div>
                             <img src={ArrowUp} alt="arrow-up" className="icon" onClick={() => setViewOrderCard(!viewOrderCard)} />
                         </div>
@@ -204,7 +204,7 @@ const SalesReport = () => {
                     </div>
                     :
                     <div className="card">
-                        <div className="sub-title-container">
+                        <div className="sub-title-container opened">
                             <div className="sub-title">Boarding</div>
                             <img src={ArrowUp} alt="arrow-up" className="icon" onClick={() => setViewBoardingCard(!viewBoardingCard)} />
                         </div>

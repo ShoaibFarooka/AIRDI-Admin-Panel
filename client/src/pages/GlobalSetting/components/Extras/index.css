@@ -1,4 +1,6 @@
-/* .extras {} */
+.extras {
+    overflow-x: auto;
+}
 
 .extras .btn-container {
     display: flex;
@@ -49,4 +51,22 @@
 
 .extras .extra:hover {
     background-color: #f0f0f0;
+}
+
+@media only screen and (min-width: 501px) and (max-width: 1205px) {
+    .extras table {
+        min-width: 360px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .extras table {
+        min-width: 250px;
+    }
+
+    .extras th,
+    .extras td {
+        padding: 6px 5px;
+        font-size: 14px;
+    }
 }
