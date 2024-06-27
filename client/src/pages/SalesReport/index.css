@@ -11,6 +11,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    height: fit-content;
     max-height: calc(100vh - 52px);
     overflow-y: auto;
     scrollbar-width: thin;
@@ -108,28 +109,32 @@
 }
 
 .sales-report .sales {
-    padding: 10px;
-    background-color: #CBD5E1;
-    height: fit-content;
+    /* height: fit-content; */
     flex: 1;
-    border-radius: 6px;
+}
+
+.sales-report .sales-header {
     display: flex;
     align-items: center;
     gap: 34px;
+    background-color: #CBD5E1;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
 }
 
-.sales-report .sales .row {
+.sales-report .sales-header .row {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.sales-report .sales .row .key {
+.sales-report .sales-header .row .key {
     font-size: 18px;
     font-weight: 700;
 }
 
-.sales-report .sales .row .value {
+.sales-report .sales-header .row .value {
     font-size: 18px;
     font-weight: 700;
     color: #E67C30;
@@ -166,23 +171,23 @@
         width: 100%;
     }
 
-    .sales-report .sales {
+    .sales-report .sales-header {
         flex-wrap: wrap;
         justify-content: space-between;
         gap: none;
         row-gap: 10px;
     }
 
-    .sales-report .sales .row {
+    .sales-report .sales-header .row {
         gap: 5px;
     }
 
-    .sales-report .sales .row .key {
+    .sales-report .sales-header .row .key {
         font-size: 14px;
         font-weight: 600;
     }
 
-    .sales-report .sales .row .value {
+    .sales-report .sales-header .row .value {
         font-size: 14px;
         font-weight: 600;
     }

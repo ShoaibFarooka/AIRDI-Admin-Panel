@@ -5,6 +5,7 @@ import ArrowDown from '../../assets/arrow-down.svg';
 import { message } from 'antd';
 import { useDispatch } from 'react-redux';
 import { HideLoading, ShowLoading } from '../../redux/loaderSlice';
+import OrdersTable from "./components/OrdersTable";
 import saleService from "../../services/saleService";
 import busService from "../../services/busService";
 
@@ -24,7 +25,8 @@ const SalesReport = () => {
         totalSales: 0,
         totalPassengers: 0,
         totalOrders: 0,
-        totalBuses: 0
+        totalBuses: 0,
+        allOrders: []
     });
     const [resetState, setResetState] = useState(false);
     const [viewJourneyCard, setViewJourneyCard] = useState(false);
@@ -57,6 +59,7 @@ const SalesReport = () => {
         try {
             dispatch(ShowLoading());
             const response = await saleService.fetchSalesReport(formData);
+            console.log('Sales Report: ', response);
             if (response.report) {
                 setSaleData(response.report);
             }
@@ -65,7 +68,8 @@ const SalesReport = () => {
                     totalSales: 0,
                     totalPassengers: 0,
                     totalOrders: 0,
-                    totalBuses: 0
+                    totalBuses: 0,
+                    allOrders: []
                 });
             }
         } catch (error) {
@@ -252,22 +256,25 @@ const SalesReport = () => {
                 </div>
             </div>
             <div className="sales">
-                <div className="row">
-                    <div className="key">Total Sales:</div>
-                    <div className="value">${saleData.totalSales}</div>
+                <div className="sales-header">
+                    <div className="row">
+                        <div className="key">Total Sales:</div>
+                        <div className="value">${saleData.totalSales}</div>
+                    </div>
+                    <div className="row">
+                        <div className="key">Total Passengers:</div>
+                        <div className="value">{saleData.totalPassengers}</div>
+                    </div>
+                    <div className="row">
+                        <div className="key">Total Orders:</div>
+                        <div className="value">{saleData.totalOrders}</div>
+                    </div>
+                    <div className="row">
+                        <div className="key">Total Bus:</div>
+                        <div className="value">{saleData.totalBuses}</div>
+                    </div>
                 </div>
-                <div className="row">
-                    <div className="key">Total Passengers:</div>
-                    <div className="value">{saleData.totalPassengers}</div>
-                </div>
-                <div className="row">
-                    <div className="key">Total Orders:</div>
-                    <div className="value">{saleData.totalOrders}</div>
-                </div>
-                <div className="row">
-                    <div className="key">Total Bus:</div>
-                    <div className="value">{saleData.totalBuses}</div>
-                </div>
+                <OrdersTable allOrders={saleData.allOrders} />
             </div>
         </div>
     )

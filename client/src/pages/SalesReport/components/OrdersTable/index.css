@@ -1,0 +1,10 @@
+.orders-table .ant-table {
+    overflow-x: auto;
+}
+.orders-table .ant-table-tbody>tr>td {
+    border: none
+}
+
+.orders-table .ant-table-row-expand-icon {
+    display: none;
+}
