@@ -15,6 +15,19 @@ const OrdersTable = ({ allOrders }) => {
             sorter: (a, b) => a.code - b.code
         },
         {
+            title: 'Name',
+            key: 'name',
+            render: (text, record) => {
+                const adult = record.adults[0];
+                return `${adult.firstname} ${adult.lastname}`;
+            },
+            sorter: (a, b) => {
+                const nameA = `${a.adults[0].firstname} ${a.adults[0].lastname}`.toLowerCase();
+                const nameB = `${b.adults[0].firstname} ${b.adults[0].lastname}`.toLowerCase();
+                return nameA.localeCompare(nameB);
+            }
+        },
+        {
             title: 'Email',
             dataIndex: 'email',
             key: 'email',
