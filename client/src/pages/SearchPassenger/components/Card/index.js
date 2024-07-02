@@ -9,7 +9,7 @@ const Card = ({ booking, handleDownload, handleView }) => {
     const [year, month, day] = dateString.split('-');
     const utcDate = new Date(Date.UTC(year, month - 1, day, 0, 0, 0));
     console.log('UTC Date: ', utcDate.toISOString().split('T')[0]);
-    console.log('Date is used so far: ',new Date(booking.journeyBus.departureDate + 'T00:00:00Z'));
+    console.log('Date is used so far: ', new Date(booking.journeyBus.departureDate + 'T00:00:00Z'));
     return (
         <div className="card">
             <div className="tags">
@@ -70,7 +70,7 @@ const Card = ({ booking, handleDownload, handleView }) => {
                     <div className="flex-col-gap-10">
                         <div className="fs12-fw400 slate-600">Journey Date</div>
                         {/* To be done */}
-                        <div className="fs14-fw600 slate-600">{new Date(booking.journeyBus.departureDate + 'T00:00:00Z').toLocaleDateString('en-US', { day: '2-digit', month: 'long', year: 'numeric' })}</div>
+                        <div className="fs14-fw600 slate-600">{booking.journeyBus.departureDate}</div>
                     </div>
                     <div className="flex-col-gap-10 align-end">
                         <div className="fs12-fw400 slate-600">Journey Time</div>
